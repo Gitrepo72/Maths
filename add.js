@@ -5,8 +5,8 @@ const option1 = document.getElementById("option1"),
 var answer = 0;
 
 function generate_equation(){ 
-  var num1 = Math.floor(Math.random() * 50),
-      num2 = Math.floor(Math.random() * 50),
+  var num1 = Math.floor(Math.random() * 51),
+      num2 = Math.floor(Math.random() * 51),
       dummyAnswer1 = Math.floor(Math.random() * 10),
       dummyAnswer2 = Math.floor(Math.random() * 10),
       allAnswers = [],
