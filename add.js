@@ -49,7 +49,7 @@ option2.addEventListener("click", function(){
 
 option3.addEventListener("click", function(){
     if(option3.innerHTML == answer){
-          audio.play();
+          audio1.play();
       generate_equation();
     }
     else{
