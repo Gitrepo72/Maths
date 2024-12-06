@@ -2,14 +2,14 @@ const option1 = document.getElementById("option1"),
       option2 = document.getElementById("option2"),
       option3 = document.getElementById("option3"),
       audio = document.getElementById("myAudio");
-      audio1 = document.getElementById("myAudio1");
+      audio1 = document.getElementById("goodjobahad");
 var answer = 0;
 
 function generate_equation(){ 
   var num1 = Math.floor(Math.random() * 51),
       num2 = Math.floor(Math.random() * 51),
-      dummyAnswer1 = Math.floor(Math.random() * 10),
-      dummyAnswer2 = Math.floor(Math.random() * 10),
+      dummyAnswer1 = Math.floor(Math.random() * 51),
+      dummyAnswer2 = Math.floor(Math.random() * 51),
       allAnswers = [],
       switchAnswers = [];
 
