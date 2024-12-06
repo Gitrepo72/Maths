@@ -1,7 +1,8 @@
 const option1 = document.getElementById("option1"),
       option2 = document.getElementById("option2"),
       option3 = document.getElementById("option3"),
-      audio = document.getElementById("myAudio");  
+      audio = document.getElementById("myAudio");
+      audio1 = document.getElementById("myAudio1");
 var answer = 0;
 
 function generate_equation(){ 
@@ -48,6 +49,7 @@ option2.addEventListener("click", function(){
 
 option3.addEventListener("click", function(){
     if(option3.innerHTML == answer){
+          audio.play();
       generate_equation();
     }
     else{
