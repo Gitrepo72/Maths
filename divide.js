@@ -5,9 +5,9 @@ const option1 = document.getElementById("option1"),
 var answer = 0;
 
 function generate_equation(){ 
-  var num1 = Math.floor(Math.random() * 10) + 1,
+  var num2 = Math.floor(Math.random() * 10) + 1,
       k = Math.floor(Math.random() * 10) + 1,
-      num2 = num1 * k
+      num1 = num2 * k,
       dummyAnswer1 = Math.floor(Math.random() * 10) / 10,
       dummyAnswer2 = Math.floor(Math.random() * 10),
       allAnswers = [],
@@ -68,4 +68,5 @@ option3.addEventListener("click", function(){
 });
 
 generate_equation()
+
 
