@@ -41,8 +41,6 @@ function generate_equation() {
         num2: num2,
         correctAnswer: correctAnswer
         // ... and the rest of your answer generation logic
-    };
-}
 
 
   if(num1 > num2){
@@ -100,6 +98,7 @@ option3.addEventListener("click", function(){
 });
 
 generate_equation()
+
 
 
 
