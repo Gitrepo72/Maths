@@ -4,13 +4,46 @@ const option1 = document.getElementById("option1"),
       audio = document.getElementById("myAudio");  
 var answer = 0;
 
-function generate_equation(){ 
-  var num1 = Math.floor(Math.random() * 10) + 1,
-      num2 = Math.floor(Math.random() * 10) + 1,
-      dummyAnswer1 = Math.floor(Math.random() * 10) / 10,
-      dummyAnswer2 = Math.floor(Math.random() * 10),
-      allAnswers = [],
-      switchAnswers = [];
+//function generate_equation(){ 
+  //var num1 = Math.floor(Math.random() * 10) + 1,
+      //num2 = Math.floor(Math.random() * 10) + 1,
+      //dummyAnswer1 = Math.floor(Math.random() * 10) / 10,
+      //dummyAnswer2 = Math.floor(Math.random() * 10),
+      //allAnswers = [],
+      //switchAnswers = [];
+
+function generate_equation() {
+    // 1. Generate num2 first (the divisor)
+    // We'll keep it between 1 and 10, as in your original code
+    var num2 = Math.floor(Math.random() * 10) + 1;
+
+    // 2. Generate a random multiple (k)
+    // This will ensure num1 is a product of k * num2
+    // We'll keep k between 1 and 10 to keep the result from getting too large
+    var k = Math.floor(Math.random() * 10) + 1;
+
+    // 3. Calculate num1 (the dividend)
+    // num1 is now guaranteed to be perfectly divisible by num2
+    var num1 = num2 * k;
+
+    // The rest of your variables remain the same
+    var dummyAnswer1 = Math.floor(Math.random() * 10) / 10,
+        dummyAnswer2 = Math.floor(Math.random() * 10),
+        allAnswers = [],
+        switchAnswers = [];
+
+    // The correct answer for a division problem will be k
+    var correctAnswer = k;
+
+    // You can return these values for your equation
+    return {
+        num1: num1,
+        num2: num2,
+        correctAnswer: correctAnswer
+        // ... and the rest of your answer generation logic
+    };
+}
+
 
   if(num1 > num2){
     answer = eval(num1 / num2);
@@ -67,5 +100,6 @@ option3.addEventListener("click", function(){
 });
 
 generate_equation()
+
 
 
