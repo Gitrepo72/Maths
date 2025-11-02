@@ -6,7 +6,8 @@ var answer = 0;
 
 function generate_equation(){ 
   var num1 = Math.floor(Math.random() * 10) + 1,
-      num2 = Math.floor(Math.random() * 10) + 1,
+      k = Math.floor(Math.random() * 10) + 1,
+      num2 = num1 * k
       dummyAnswer1 = Math.floor(Math.random() * 10) / 10,
       dummyAnswer2 = Math.floor(Math.random() * 10),
       allAnswers = [],
@@ -67,3 +68,4 @@ option3.addEventListener("click", function(){
 });
 
 generate_equation()
+
